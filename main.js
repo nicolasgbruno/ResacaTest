@@ -28,15 +28,11 @@ let imagen = document.createElement("img");
 // Trae los objetos disponibles del array para mostrarlos en el select de html
 const elegir = document.getElementById("eleccionBebidas");
 
-// Botón para confirmar las elecciones y mostrar el resultado
-
-const totales = [];
-
 // Mensaje de bienvenida insertado desde acá en el HTML obteniendo el nombre de usuario desde LocalStorage
 usuario = localStorage.getItem("usuario");
 bienvenida.innerHTML = `Bienvenida/o, ${usuario}`
 
-// Utilizo el método Fetc para pedir los datos al archivo Json
+// Utilizo el método Fetch para pedir los datos al archivo Json
 
 fetch("data.json")
     .then((response) => response.json())
